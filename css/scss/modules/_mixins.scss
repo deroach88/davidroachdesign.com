@@ -1,0 +1,85 @@
+@mixin background-gradient($from, $to){
+	background: $from;
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,$from),color-stop(100%,$to));
+	background: -webkit-linear-gradient(top,$from 0%,$to 100%);
+	background: -moz-linear-gradient(top,$from 0%,$to 100%);
+	background: -ms-linear-gradient(top,$from 0%,$to 100%);
+	background: -o-linear-gradient(top,$from 0%,$to 100%);
+	background: linear-gradient(top,$from 0%,$to 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$from",endColorstr="$to",GradientType=0);
+}
+
+@mixin bitter() {
+	font-weight: 400;
+	font-family: "Bitter", sans-serif;
+}
+
+@mixin bitter-bold() {
+	font-weight: 700;
+	font-family: "Bitter", sans-serif;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius:	$radius;
+	-moz-border-radius:		$radius;
+	border-radius:			$radius;
+	-ms-border-radius:		$radius;
+	-o-border-radius:		$radius;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+	-webkit-box-shadow:	$top $left $blur $color #{$inset};
+	-moz-box-shadow:	$top $left $blur $color #{$inset};
+	box-shadow:			$top $left $blur $color #{$inset};
+}
+
+@mixin center-align {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	-webkit-transform:	translate(-50%, -50%);
+	-moz-transform:		translate(-50%, -50%);
+	-ms-transform:		translate(-50%, -50%);
+	-o-transform:		translate(-50%, -50%);
+	transform:			translate(-50%, -50%);
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+@mixin opacity($opacity) {
+	$opacity-ie: $opacity * 100;
+	opacity: $opacity;
+	filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin placeholder($color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform:	translateY(-50%);
+	-moz-transform:		translateY(-50%);
+	-ms-transform:		translateY(-50%);
+	-o-transform:		translateY(-50%);
+	transform:			translateY(-50%);
+}

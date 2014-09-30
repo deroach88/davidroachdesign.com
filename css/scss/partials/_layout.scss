@@ -1,0 +1,126 @@
+* {
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing:	border-box;
+	box-sizing:			border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-ms-box-sizing:		border-box;
+	-o-box-sizing:		border-box;
+	-webkit-appearance: none;
+	-moz-appearance: 	none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+}
+
+body {
+	overflow: hidden;
+}
+
+.container {
+	padding: 20px;
+}
+
+#nav,
+#sidebar,
+.overview,
+.screens {
+	@include transition(all 0.5s);
+	position: absolute;
+	height: 100%;
+}
+
+#sidebar,
+.overview,
+.screens {
+	overflow-y: scroll;
+}
+
+#sidebar,
+.overview {
+	background: #fff;
+}
+
+#nav {
+	left: 0;
+	z-index: 999;
+	background: url("../img/bkgd-menu.jpg") repeat left top #363636;
+	text-align: center;
+
+	.container {
+		padding: 0;
+	}
+
+	&.expand {
+		left: 276px;
+	}
+}
+
+#sidebar {
+	left: -276px;
+	z-index: 99;
+	width: 276px;
+
+	&.expand {
+		left: 0;
+	}
+}
+
+.overview,
+.screens {
+	left: 44px;
+	width: -webkit-calc(100% - 44px);
+	width: -moz-calc(100% - 44px);
+	width: -o-calc(100% - 44px);
+	width: calc(100% - 44px);
+}
+
+.overview {
+	left: -767px;
+	z-index: 9;
+
+	@media (min-width: 768px) {
+		left: 60px;
+		float: left;
+		width: -webkit-calc(40% - 30px);
+		width: -moz-calc(40% - 30px);
+		width: -o-calc(40% - 30px);
+		width: calc(40% - 30px);
+	}
+
+	.container {
+		@media (min-width: 768px) {
+			padding: 40px;
+		}
+	}
+
+	&.expand-mobile {
+		left: 44px !important;
+	}
+}
+
+.screens {
+	top: 0;
+	right: auto;
+	text-align: center;
+
+	@media (min-width: 768px) {
+		right: 0;
+		left: auto;
+		width: -webkit-calc(60% - 30px);
+		width: -moz-calc(60% - 30px);
+		width: -o-calc(60% - 30px);
+		width: calc(60% - 30px);
+	}
+}
+
+.clear {
+	clear: both;
+}

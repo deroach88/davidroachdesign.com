@@ -1,0 +1,51 @@
+.profile-photo {
+	text-align: center;
+
+	img {
+		overflow: hidden;
+		margin: 0 auto 10px;
+		width: 200px;
+		-webkit-border-radius:	200px;
+		-moz-border-radius:		200px;
+		border-radius:			200px;
+		-ms-border-radius:		200px;
+		-o-border-radius:		200px;
+	}
+}
+
+.contact {
+	margin-top: 20px;
+
+	ul {
+		margin: 0;
+		padding: 20px 0 0;
+		border-top: 1px solid $dkgray;
+		list-style: none;
+	}
+
+	li {
+		margin-bottom: 20px;
+		line-height: normal;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	strong {
+		text-transform: uppercase;
+	}
+
+	.twitter,
+	.dribbble,
+	.behance,
+	.linkedin {
+		@include font-size(30px);
+		display: inline-block;
+		float: left;
+
+		a {
+			border: none;
+		}
+	}
+}

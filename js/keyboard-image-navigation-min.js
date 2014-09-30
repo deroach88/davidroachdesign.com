@@ -1,0 +1,1 @@
+!function($){$(document).on("keydown.twentyfourteen",function(t){var e=!1;37===t.which?e=$(".previous-image a").attr("href"):39===t.which&&(e=$(".entry-attachment a").attr("href")),e&&!$("textarea, input").is(":focus")&&(window.location=e)})}(jQuery);

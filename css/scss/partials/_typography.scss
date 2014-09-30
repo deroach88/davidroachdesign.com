@@ -1,0 +1,65 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: "custom-webfont";
+	src: url("../fonts/custom-webfont.eot");
+	src: url("../fonts/custom-webfont.eot#iefix") format("embedded-opentype"),
+		 url("../fonts/custom-webfont.svg#custom-webfont") format("svg"),
+		 url("../fonts/custom-webfont.woff") format("woff"),
+		 url("../fonts/custom-webfont.ttf") format("truetype");
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	display: inline-block;
+	margin-right: 0.2em;
+	margin-left: 0.2em;
+	width: 1em;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: "custom-webfont";
+	line-height: 1em;
+	speak: none;
+}
+
+.icon-arrow-right:before { content: "\e800"; }
+.icon-arrow-left:before { content: "\e801"; }
+.icon-twitter:before { content: "\e802"; }
+.icon-dribbble:before { content: "\e803"; }
+.icon-behance:before { content: "\e804"; }
+.icon-linkedin:before { content: "\e805"; }
+
+body {
+	@include bitter;
+	@include font-size(14px);
+	color: $dkgray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 20px;
+	text-transform: uppercase;
+}
+
+p {
+	margin-bottom: 20px;
+	line-height: 1.8;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	border-bottom: 1px solid $dkgray;
+	color: $dkgray;
+	text-decoration: none;
+}
