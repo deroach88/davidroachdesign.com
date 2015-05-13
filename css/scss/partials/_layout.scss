@@ -14,6 +14,29 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+@mixin scrollbars($size, $foreground-color: mix(white, 50%), $background-color: mix($foreground-color, white, 0%)) {
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.5);
+  }
+
+  ::-webkit-scrollbar-track {
+      background: transparent;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@include scrollbars(.5em, #000);
+
 html {
 	width: 100%;
 	height: 100%;
