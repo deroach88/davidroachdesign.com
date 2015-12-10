@@ -1,5 +1,5 @@
 		<aside id="sidebar">
-			<div class="container">
+			<div class="container-sidebar">
 				<?php
 					$profile_photo = ot_get_option( 'profile_photo' );
 					$heading = ot_get_option( 'heading' );
