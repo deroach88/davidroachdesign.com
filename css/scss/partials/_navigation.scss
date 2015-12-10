@@ -49,15 +49,15 @@
 
 		.icon-arrow-right:before,
 		.icon-arrow-left:before {
-			@include font-size(24px);
+			font-size: 1.3rem;
 			position: relative;
-			top: -1px;
-			left: -5px;
+			top: 0px;
+			left: -3px;
 			color: #fff;
 
 			@media (min-width: 768px) {
-				top: -3px;
-				left: -7px;
+				top: -1px;
+				left: -5px;
 			}
 		}
 
@@ -149,8 +149,9 @@
 		border-bottom: none;
 
 		a {
-			@include font-size(24px);
-			line-height: 0.6;
+			font-size: 1.9rem;
+			line-height: 0.5;
+			color: #00e653;
 		}
 
 		span {
@@ -166,10 +167,12 @@
 
 		&.active span {
 			@include transform(rotate(-45deg));
-			right: 17px;
+			right: 15px;
+			font-size: 2.1rem;
 
 			@media (min-width: 768px) {
-				right: 25px;
+				right: 23px;
+				font-size: 2.1rem;
 			}
 		}
 	}
