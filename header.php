@@ -55,6 +55,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Bitter:400,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700,500">
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" media="screen" href="<?php echo get_template_directory_uri(); ?>/css/styles.css">
