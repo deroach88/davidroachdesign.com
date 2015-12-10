@@ -14,10 +14,10 @@ img {
 
 .screens img {
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 
 	&:last-of-type {
-		margin-bottom: 0;
+		margin-bottom: 20px;
 	}
 }
 
@@ -26,6 +26,8 @@ img {
 	padding: 20px 0;
 	border-top: 1px solid $dkgray;
 	border-bottom: 1px solid $dkgray;
+	border-top-style: dashed;
+	border-bottom-style: dashed;
 	list-style: none;
 	text-transform: uppercase;
 
@@ -33,12 +35,14 @@ img {
 		margin-bottom: 0;
 		padding: 20px 0;
 		border-bottom: 1px solid $dkgray;
+		border-bottom-style: dashed;
 
 		@media (min-width: 1280px) {
 			display: inline-block;
 			float: left;
 			padding: 0 20px;
 			border-right: 1px solid $dkgray;
+			border-right-style: dashed;
 		}
 
 		&:first-of-type {
