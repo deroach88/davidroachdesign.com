@@ -9,6 +9,10 @@
 
 get_header(); ?>
 
+		<?php
+$content = types_render_field( 'content', array( 'raw' => true ) );
+?>
+
 		<?php get_template_part( 'includes/include-sidebar' ); ?>
 
 		<section id="case-study">
@@ -23,9 +27,7 @@ get_header(); ?>
 						<li>Client: <strong><?php echo $client; ?></strong></li>
 						<li>Role: <strong><?php echo $role; ?></strong></li>
 					</ul>
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<?php the_content(); ?>
-					<?php endwhile; endif; ?>
+					<?php echo $content; ?>
 				</div>
 			</div>
 			<?php get_template_part( 'includes/include-screens' ); ?>
