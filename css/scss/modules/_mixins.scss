@@ -19,6 +19,21 @@
 	font-family: "Bitter", sans-serif;
 }
 
+@mixin mavenPro() {
+	font-weight: 500;
+	font-family: "Maven Pro", sans-serif;
+}
+
+@mixin mavenPro-bold() {
+	font-weight: 700;
+	font-family: "Maven Pro", sans-serif;
+}
+
+@mixin mavenPro-light() {
+	font-weight: 400;
+	font-family: "Maven Pro", sans-serif;
+}
+
 @mixin border-radius($radius) {
 	-webkit-border-radius:	$radius;
 	-moz-border-radius:		$radius;
