@@ -80,20 +80,20 @@
 						</a>
 					</li>
 					<?php
-						$posts = get_posts( 'post_type="page"&amp;post_status="publish"&amp;numberposts=99999&amp;orderby=menu_order' );
+						$posts = get_posts( 'post_type="page"&post_status="publish"&numberposts=99999&orderby=menu_order' );
 						$pages = get_page_hierarchy( $posts );
 						$pages = array_keys( $pages );
 						$current = array_search($post -> ID, $pages );
-						$prevID = $pages[ $current+1 ];
-						$nextID = $pages[ $current-1 ];
+						$prevID = $pages[ $current + 1 ];
+						$nextID = $pages[ $current - 1 ];
 					?>
 					<?php
-						if (!empty($prevID)) {
+						if (!empty( $prevID )) {
 					?>
 						<li><a href="<?php echo get_permalink( $prevID ); ?>"><span class="icon-arrow-right"></span></a></li>
 					<?php
 						}
-						if (!empty($nextID)) {
+						if (!empty( $nextID )) {
 					?>
 						<li><a href="<?php echo get_permalink( $nextID ); ?>"><span class="icon-arrow-left"></span></a></li>
 					<?php
